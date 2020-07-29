@@ -1,0 +1,81 @@
+.MainWrapper{
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+    background-image: url('../Media/VectoBackground.jpg');
+    background-size: cover;
+}
+.SearchSection{
+    width: auto;
+    display: inline-block;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    display: flex;
+    align-items: center;
+
+}
+
+.searchButton{
+    border-radius: 50%;
+    background-color: #59788E;
+    border-color: blue;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    color: white;
+    border-width: 0px;
+    z-index: 1;
+}
+
+.searchInputHidden{
+    visibility: hidden;
+}
+@keyframes fadein {
+    from { left: 80px;
+            opacity: 0; }
+    to   { left: 0px;
+            opacity: 1; }
+}
+.searchInputVisible{
+    height: 100%;
+    border-radius: 15px;
+    border-color: transparent;
+    visibility: visible;
+    position: relative;
+    margin-right: 10px;
+    -webkit-animation: fadein .8s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein .8s; /* Firefox < 16 */
+     -ms-animation: fadein .8s; /* Internet Explorer */
+      -o-animation: fadein .8s; /* Opera < 12.1 */
+         animation: fadein .8s;
+}
+
+/* CSS for the main secction weather */
+.MainContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.CurrentWeather{
+    width: 80%;
+    height: auto;
+    color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+}
+.MainTemp{
+    font-size: 3em;
+}
+
+
+/* .ForecastChart{
+    width: 100%;
+  } */
