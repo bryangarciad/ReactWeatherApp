@@ -11,29 +11,37 @@ function HourlyForecast(props) {
     ]);
 
     const Options = { 
+        toolTip: {
+        },
         animationEnabled: true,
         backgroundColor: "rgba(255,255,255,0)",
-        title: {
+        axisY:{
+            labelFontColor: "rgba(255,255,255,0)",
+            gridColor:  "rgba(0,0,0,0)",
+            lineColor: "rgba(0,0,0,0)",
+            tickColor: "rgba(0,0,0,0)"
         },
+        axisX:{labelFontColor: "white"},
         data: [{				
                 type: "area",
-                fillColor: "black",
-                lineColor:"black",
-                lineThickness: 3,
-                dataPoints: DataPoints
+                color: "white",
+                lineColor:"cian",
+                fillOpacity: .3,
+                lineThickness: 5,
+                dataPoints: DataPoints,
+                // indexLabel: "{y}"
         }]
     }
 
     function UpdateData(){
         if(Array.isArray(props.Forecast)){
-            const currentHour = new Date().getHours();
-            let leftHour =  24 - currentHour;
-            console.log(leftHour);
+            // const currentHour = new Date().getHours();
+            // let leftHour =  24 - currentHour;
+            let leftHour = 12;
             const newDataList =  props.Forecast.map((item) => {
                 if(leftHour >= 0){
                  leftHour = leftHour-1;
-                 return {label: new Date(item.dt * 1000).getHours() + ":00", y: item.temp, color: "white"}
-                 
+                 return {label: new Date(item.dt * 1000).getHours() + ":00", y: item.temp, color: "cian"}
                 }
              })
              setDataPoints(newDataList.filter(item => item));

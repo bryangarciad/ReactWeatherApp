@@ -59,6 +59,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    flex-wrap: nowrap;
 }
 .MainWeatherSection{
     width: 60%;
@@ -129,13 +130,18 @@
 
 .MainForecastSection{
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
+   
 
 }
 .HourlyForecast{
-    width: 100%;
+
+}
+
+.ForecastChart{
+    
 }
 /* .ForecastChart{
     width: 100%;

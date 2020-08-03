@@ -18,6 +18,7 @@ function App() {
   const [Count, setCount] = useState(0);
   const [Forecast,setForecast] = useState([{}]);
   const [FindForecast, setFindForecast ] = useState(true);
+  const [CoordLocation, setCoordLocation] = useState({});
 
   const updateLocation = (newLocation) => { 
     setLocation(newLocation);
@@ -25,13 +26,15 @@ function App() {
       .then(res =>{
           setMainWeather(res.data.main);
           setWeatherDetail(res.data.weather);
+          setCoordLocation(res.data.coord);
           console.log(res);
           setFind(true);
       })
       .catch((err) => {
         setFind(false);
       }) 
-      axios.get(`${api.base}onecall?q=${newLocation}&units=metric&APPID=${api.key}`)
+      
+      axios.get(`${api.base}onecall?lat=${CoordLocation.lat}&lon=${CoordLocation.lon}&units=metric&APPID=${api.key}`)
       .then(res => {
         setForecast(res.data);
         setFindForecast(true);

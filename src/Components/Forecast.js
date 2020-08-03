@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, Fragment } from 'react'
 import "../Styles/App.css";
 import HourlyForecast from './HourlyForecast'
+import DayliForecast from './DayliForecast'
 
 function Forecast(props) {
     
@@ -10,10 +11,10 @@ function Forecast(props) {
 
     return (
         props.ForecastFind ?
-        <div className="MainForecastSection">
-            <HourlyForecast Forecast = {props.Forecast.hourly}></HourlyForecast>
-            {/* <DayliForecast></DayliForecast> */}
-        </div>
+        <Fragment>
+            <HourlyForecast className="ForecastChart" Forecast = {props.Forecast.hourly}></HourlyForecast>
+            <DayliForecast Forecast={props.Forecast.daily}></DayliForecast>
+        </Fragment>
         :
         <h1>No FORECAST</h1>
     )
