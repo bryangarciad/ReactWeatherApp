@@ -60,22 +60,83 @@
     justify-content: center;
     flex-direction: column;
 }
+.MainWeatherSection{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* background-color: rgba(0, 0, 0, .5); */
+    flex-wrap: wrap;
+    
+}
+
+.WeatherImage{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.WeatherImg{
+    height: 150px;
+    width: 150px;
+
+}
 
 .CurrentWeather{
-    width: 80%;
-    height: auto;
     color: blanchedalmond;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     text-align: center;
+    margin: 15px;
+
+}
+.CurrentWeather h1{
+    margin: 0px;
 }
 .MainTemp{
-    font-size: 3em;
+    font-size: 4em;
 }
 
+.WeatherDetailsSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: whitesmoke;
+    flex-wrap: wrap;
+    font-size: 1em;
+    
+    
+}
+.WeatherDetailsSection article{
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin-left: 15px;
+    
+}
+.WeatherDetailsSection article h1{
+    width: auto;
+    height: auto;
+    text-align: left;
+    margin-left: 10px;
+    
+}
 
+.MainForecastSection{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+
+}
+.HourlyForecast{
+    width: 100%;
+}
 /* .ForecastChart{
     width: 100%;
   } */

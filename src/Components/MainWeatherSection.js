@@ -17,7 +17,7 @@ export default class MainWeatherSection extends Component {
         return (
             <div className="MainContent">
                 <CurrentWeather className="currentWeather" Location={this.props.Location} MainWeather = {this.props.MainWeather} WeatherDetail ={this.props.WeatherDetail} DataFind ={this.props.DataFind}></CurrentWeather>
-                <Forecast className="forecastWeather"></Forecast>
+                <Forecast ForecastFind = {this.props.FindForecast} Forecast={this.props.Forecast} className="forecastWeather"></Forecast>
                 {/* <Switch>
                     <Route exact path="/" component={CurrentWeather} Click ={this.handleClick}/>
                     <Route path="/Forecast" component={Forecast} />

@@ -1,8 +1,7 @@
 import React, {useLayoutEffect, useState} from 'react'
 import "../Styles/App.css";
-import axios from "axios"
 
-
+const WeatherImage = require("../Media/cloudy.png")
 function CurrentWeather(props) {
     let newDate = new Date()
     let date = newDate.getDate();
@@ -15,13 +14,28 @@ function CurrentWeather(props) {
 
     return (
         props.DataFind 
-        ? <div className="CurrentWeather">
-            <img></img>
-            <h1>{(props.Location).toString().charAt(0).toUpperCase() + (props.Location).toString().slice(1)}</h1>
-            <h2>{`${dayName}${", "}${MonthName}${" "}${date}${", "}${year}`}</h2>
-            <h1 className="MainTemp">{props.MainWeather.temp}</h1>
-            <h1>{props.WeatherDetail[0].main}</h1>
-            <h1>{props.MainWeather.name}</h1>
+        ?<div className="MainWeatherSection"> 
+            <section className="WeatherImage" >
+                <img src={WeatherImage} alt="WeatherimageCase" className="WeatherImg"></img>
+            </section>
+            <div className="CurrentWeather">
+                <h1>{(props.Location).toString().charAt(0).toUpperCase() + (props.Location).toString().slice(1)}</h1>
+                <h2>{`${dayName}${", "}${MonthName}${" "}${date}${", "}${year}`}</h2>
+                <h1 className="MainTemp">{`${props.MainWeather.temp}${"°C"}`}</h1>
+                <h1>{props.WeatherDetail[0].description}</h1>
+                <h1>{props.MainWeather.name}</h1>
+            </div>
+            <section className="WeatherDetailsSection">
+                <article>
+                    <h1>{`${"Max: "}${props.MainWeather.temp_max}${"°C"}`}</h1>
+                    <h1>{`${"Min: "}${props.MainWeather.temp_min}${"°C"}`}</h1>
+                </article>
+                <article>
+                    <h1>{`${"Feels Like: "}${props.MainWeather.feels_like}${"°C"}`}</h1>
+                    <h1>{`${"Humidity: "}${props.MainWeather.humidity}${"%"}`}</h1>
+                </article>
+
+            </section>
         </div>
         : <div><h1>Nothing Find</h1></div>
     )
