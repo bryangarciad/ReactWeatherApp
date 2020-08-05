@@ -136,13 +136,39 @@
    
 
 }
-.HourlyForecast{
-
-}
-
-.ForecastChart{
-    
-}
-/* .ForecastChart{
+.DailyForecast{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
     width: 100%;
-  } */
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.weatherCard{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: rgba(103, 128, 159, .90);
+    border-radius: 15%;
+    color: white;
+}
+
+.weatherCard h5{
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.weatherCard h3{
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.SmallWeatherImg{
+    width: 50%;
+}

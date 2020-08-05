@@ -25,7 +25,7 @@ function HourlyForecast(props) {
         data: [{				
                 type: "area",
                 color: "white",
-                lineColor:"cian",
+                lineColor:"rgb(103, 128, 159)",
                 fillOpacity: .3,
                 lineThickness: 5,
                 dataPoints: DataPoints,

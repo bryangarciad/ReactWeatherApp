@@ -1,7 +1,7 @@
 import React, {useLayoutEffect, useState} from 'react'
 import "../Styles/App.css";
 
-const WeatherImage = require("../Media/cloudy.png")
+const WeatherImage = require("../Media/Clouds.png")
 function CurrentWeather(props) {
     let newDate = new Date()
     let date = newDate.getDate();

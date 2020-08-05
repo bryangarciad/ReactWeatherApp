@@ -12,7 +12,7 @@ function Forecast(props) {
     return (
         props.ForecastFind ?
         <Fragment>
-            <HourlyForecast className="ForecastChart" Forecast = {props.Forecast.hourly}></HourlyForecast>
+            <HourlyForecast  Forecast = {props.Forecast.hourly}></HourlyForecast>
             <DayliForecast Forecast={props.Forecast.daily}></DayliForecast>
         </Fragment>
         :
