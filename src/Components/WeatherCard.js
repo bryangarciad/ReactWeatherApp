@@ -24,8 +24,8 @@ export default function weatherCard(props) {
             <h5>{typeof props.dt !== undefined?  props.dt: "" }</h5>
             <img src={getPhoto(props.weather)} alt={props.weather} className="SmallWeatherImg"></img>
             <h3>{props.day} °C</h3>
-            <h5>Max: {props.tempMax} °C</h5>
-            <h5>Min: {props.tempMin} °C</h5>
+            <h5 className="dailyDetails">Max: {props.tempMax} °C</h5>
+            <h5 className="dailyDetails">Min: {props.tempMin} °C</h5>
         </div>
     )
 }

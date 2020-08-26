@@ -53,9 +53,9 @@ function HourlyForecast(props) {
     })
 
     return (
-        <Fragment>
+        <Fragment >
     
-            <CanvasJSChart options = {Options} />
+            <CanvasJSChart className="hourlyForecast" options = {Options} />
     
         </Fragment>
     )

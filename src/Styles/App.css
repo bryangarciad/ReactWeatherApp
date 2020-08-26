@@ -172,3 +172,17 @@
 .SmallWeatherImg{
     width: 50%;
 }
+
+
+@media only screen and (max-width: 860px) {
+    .weatherCard{
+        display: none;
+    }
+    .MainWrapper{
+        width: 100vw;
+        height: 100vh;
+        display: inline-block;
+        background-image: url('../Media/VectoBackground.jpg');
+        background-size: cover;
+    }
+  }
